@@ -1,0 +1,44 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/home/add" method="post">
+    Libelle:<input type="text" name="libelle"/>
+    Prix:<input type="number" name="prix" />
+    Quantite:<input type="number" name="quantite"/>
+    <input type="submit" value="add" />
+</form>
+
+<table border="1">
+    <thead>
+    <th>Identifiant</th>
+    <th>Libelle</th>
+    <th>Prix</th>
+    <th>Quantite</th>
+    <th>Action</th>
+    </thead>
+    <tbody>
+    {% for item in result %}
+    <tr>
+        <td>{{ item._id}}</td>
+        <td>{{ item.libelle}}</td>
+        <td>{{ item.prix}}</td>
+        <td>{{ item.quantite}}</td>
+        <td>
+            <a href="/home/details/{{ item._id }}">Detail</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+
+</body>
+</html>

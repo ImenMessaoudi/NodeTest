@@ -1,0 +1,20 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/home/update" method="post" >
+    Libelle:<input type="text" name="libelle" value="{{ result.libelle}}"/>
+    Prix:<input type="number" name="prix" value="{{ result.prix}}"/>
+    Quantite:<input type="number" name="quantite" value="{{ result.quantite}}"/>
+    <input type="hidden" name="secretId" value="{{ result._id}}"/>
+    <input type="submit" value="ok" />
+</form>
+</body>
+</html>
