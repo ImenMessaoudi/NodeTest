@@ -13,5 +13,10 @@
     "mongoose": "^6.3.4",
     "morgan": "~1.9.1",
     "twig": "~0.10.3"
-  }
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha",
+    "build": "webpack --config webpack.config.js"
+}
 }
